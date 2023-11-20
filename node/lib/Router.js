@@ -195,14 +195,16 @@ class Router extends EnhancedEventEmitter_1.EnhancedEventEmitter {
         }
         // If webRtcServer is given, then do not force default values for enableUdp
         // and enableTcp. Otherwise set them if unset.
-        if (webRtcServer) {
-            enableUdp ??= true;
-            enableTcp ??= true;
-        }
-        else {
-            enableUdp ??= true;
-            enableTcp ??= false;
-        }
+        enableUdp = true;
+        enableTcp = true;
+        // if (webRtcServer) {
+        //     enableUdp ??= true;
+        //     enableTcp ??= true;
+        // }
+        // else {
+        //     enableUdp ??= true;
+        //     enableTcp ??= false;
+        // }
         // Convert deprecated TransportListenIps to TransportListenInfos.
         if (listenIps) {
             // Normalize IP strings to TransportListenIp objects.
