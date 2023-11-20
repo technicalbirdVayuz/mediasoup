@@ -1,0 +1,162 @@
+{
+  "_from": "mediasoup@3.13.2",
+  "_id": "mediasoup@3.13.2",
+  "_inBundle": false,
+  "_integrity": "sha512-qPJfLnTaRz0YAx9ERsS8nuzkl07eZyS0H14E53yal8d3WffBXD8JeaqvqQC53CHoNRLrWkeaiFo8H/qji5dheQ==",
+  "_location": "/mediasoup",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "mediasoup@3.13.2",
+    "name": "mediasoup",
+    "escapedName": "mediasoup",
+    "rawSpec": "3.13.2",
+    "saveSpec": null,
+    "fetchSpec": "3.13.2"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mediasoup/-/mediasoup-3.13.2.tgz",
+  "_shasum": "f288269162c3b1088d243d203cb29a0cddf4f65c",
+  "_spec": "mediasoup@3.13.2",
+  "_where": "/Users/bird/Documents/Projects/Bitovn/Bridge/v2/bitovn-bridge-meteor",
+  "bugs": {
+    "url": "https://github.com/versatica/mediasoup/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Iñaki Baz Castillo",
+      "email": "ibc@aliax.net",
+      "url": "https://inakibaz.me"
+    },
+    {
+      "name": "José Luis Millán",
+      "email": "jmillan@aliax.net",
+      "url": "https://github.com/jmillan"
+    },
+    {
+      "name": "Nazar Mokynskyi",
+      "url": "https://github.com/nazar-pc"
+    }
+  ],
+  "dependencies": {
+    "debug": "^4.3.4",
+    "flatbuffers": "^23.5.26",
+    "h264-profile-level-id": "^1.0.1",
+    "node-fetch": "^3.3.2",
+    "supports-color": "^9.4.0",
+    "tar": "^6.2.0"
+  },
+  "deprecated": false,
+  "description": "Cutting Edge WebRTC Video Conferencing",
+  "devDependencies": {
+    "@octokit/rest": "^20.0.2",
+    "@types/debug": "^4.1.12",
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.1",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "jest": "^29.7.0",
+    "marked": "^10.0.0",
+    "open-cli": "^7.2.0",
+    "pick-port": "^1.0.1",
+    "sctp": "^1.0.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "files": [
+    "node/lib",
+    "worker/deps/libwebrtc",
+    "worker/fbs",
+    "worker/fuzzer/include",
+    "worker/fuzzer/src",
+    "worker/include",
+    "worker/scripts/*.js",
+    "worker/scripts/*.json",
+    "worker/scripts/*.py",
+    "worker/scripts/*.sh",
+    "worker/src",
+    "worker/subprojects/*.wrap",
+    "worker/test/include",
+    "worker/test/src",
+    "worker/Makefile",
+    "worker/meson.build",
+    "worker/meson_options.txt",
+    "npm-scripts.mjs"
+  ],
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/mediasoup"
+  },
+  "homepage": "https://mediasoup.org",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "testRegex": "node/src/tests/test-.*\\.ts",
+    "transform": {
+      "^.*\\.ts$": [
+        "ts-jest",
+        {
+          "diagnostics": {
+            "ignoreCodes": [
+              "TS151001"
+            ]
+          }
+        }
+      ]
+    },
+    "coveragePathIgnorePatterns": [
+      "node/src/fbs",
+      "node/src/tests"
+    ],
+    "cacheDirectory": ".cache/jest"
+  },
+  "keywords": [
+    "webrtc",
+    "ortc",
+    "sfu",
+    "nodejs"
+  ],
+  "license": "ISC",
+  "main": "node/lib/index.js",
+  "name": "mediasoup",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/versatica/mediasoup.git"
+  },
+  "scripts": {
+    "coverage:node": "node npm-scripts.mjs coverage:node",
+    "flatc": "npm run flatc:node && npm run flatc:worker",
+    "flatc:node": "node npm-scripts.mjs flatc:node",
+    "flatc:worker": "node npm-scripts.mjs flatc:worker",
+    "format:worker": "node npm-scripts.mjs format:worker",
+    "install-deps:node": "node npm-scripts.mjs install-deps:node",
+    "install-worker-dev-tools": "node npm-scripts.mjs install-worker-dev-tools",
+    "lint": "npm run lint:node && npm run lint:worker",
+    "lint:node": "node npm-scripts.mjs lint:node",
+    "lint:worker": "node npm-scripts.mjs lint:worker",
+    "postinstall": "node npm-scripts.mjs postinstall",
+    "prepare": "node npm-scripts.mjs prepare",
+    "release": "node npm-scripts.mjs release",
+    "release:check": "node npm-scripts.mjs release:check",
+    "release:upload-mac-arm-prebuilt-worker": "node npm-scripts.mjs release:upload-mac-arm-prebuilt-worker",
+    "test": "npm run test:node && npm run test:worker",
+    "test:node": "node npm-scripts.mjs test:node",
+    "test:worker": "node npm-scripts.mjs test:worker",
+    "typescript:build": "node npm-scripts.mjs typescript:build",
+    "typescript:watch": "node npm-scripts.mjs typescript:watch",
+    "worker:build": "node npm-scripts.mjs worker:build",
+    "worker:prebuild": "node npm-scripts.mjs worker:prebuild"
+  },
+  "types": "node/lib/index.d.ts",
+  "version": "3.13.2"
+}
